@@ -3,7 +3,7 @@ package binarySearch;
 public class OrderAgnosticBinarySearch {
 
     public static void main(String[] args) {
-        int[] arrAsc = {-20, -10, 0, 2, 4, 6, 15, 26, 67, 98 };
+        int[] arrAsc = {-20, -10, 0, 2, 4, 6, 15, 26, 67, 98};
         System.out.println(orderAgnosticBinarySearch(arrAsc, 67));
 
         int[] arrDesc = {100, 78, 56, 41, 20, 15, 10, 9, 6, 3, 1, -10};
