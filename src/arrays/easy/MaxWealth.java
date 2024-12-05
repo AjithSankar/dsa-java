@@ -1,4 +1,4 @@
-package arrays;
+package arrays.easy;
 // https://leetcode.com/problems/richest-customer-wealth/description/
 public class MaxWealth {
 
