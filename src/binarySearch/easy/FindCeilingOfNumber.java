@@ -4,6 +4,7 @@ public class FindCeilingOfNumber {
 
     public static void main(String[] args) {
         int[] arr = {2, 3, 4, 7, 10, 13, 19, 21, 28};
+        // Ceiling -> The smallest number greater than or equal to target
         System.out.println(findCeiling(arr, 28));
     }
 
