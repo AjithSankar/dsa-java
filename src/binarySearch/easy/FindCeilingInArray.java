@@ -1,6 +1,6 @@
 package binarySearch.easy;
 
-public class FindCeilingOfNumber {
+public class FindCeilingInArray {
 
     public static void main(String[] args) {
         int[] arr = {2, 3, 4, 7, 10, 13, 19, 21, 28};
@@ -9,7 +9,6 @@ public class FindCeilingOfNumber {
     }
 
     private static int findCeiling(int[] arr, int target) {
-        int ceiling = -1;
 
         int start = 0;
         int end = arr.length;
