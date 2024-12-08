@@ -8,7 +8,12 @@ public class FindCeilingInArray {
         System.out.println(findCeiling(arr, 28));
     }
 
+    // return an index of smallest number greater than or equal to target
     private static int findCeiling(int[] arr, int target) {
+
+        if (target > arr[arr.length - 1]) {
+            return -1;
+        }
 
         int start = 0;
         int end = arr.length;
@@ -22,10 +27,10 @@ public class FindCeilingInArray {
             } else if (target < arr[mid]) {
                 end = mid - 1;
             } else {
-                return target;
+                return mid;
             }
 
         }
-        return arr[start];
+        return start;
     }
 }

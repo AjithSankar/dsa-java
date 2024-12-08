@@ -8,6 +8,7 @@ public class FindFloorInArray {
         System.out.println(findCeiling(arr, 15));
     }
 
+    // return an index of greatest number less than or equal to target
     private static int findCeiling(int[] arr, int target) {
 
         int start = 0;
@@ -22,10 +23,10 @@ public class FindFloorInArray {
             } else if (target < arr[mid]) {
                 end = mid - 1;
             } else {
-                return target;
+                return mid;
             }
 
         }
-        return arr[end];
+        return end;
     }
 }
