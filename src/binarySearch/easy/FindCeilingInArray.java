@@ -11,6 +11,7 @@ public class FindCeilingInArray {
     // return an index of smallest number greater than or equal to target
     private static int findCeiling(int[] arr, int target) {
 
+        //  Edge Case, What if the target number is greater than the greatest element in array
         if (target > arr[arr.length - 1]) {
             return -1;
         }
