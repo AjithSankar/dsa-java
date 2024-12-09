@@ -1,4 +1,4 @@
-package binarySearch.easy;
+package binarySearch;
 
 // https://leetcode.com/problems/find-smallest-letter-greater-than-target/description/
 public class FindSmallestLetter {

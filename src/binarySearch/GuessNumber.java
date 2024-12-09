@@ -1,6 +1,4 @@
-package binarySearch.easy;
-
-import java.util.Random;
+package binarySearch;
 
 // https://leetcode.com/problems/guess-number-higher-or-lower/
 public class GuessNumber extends GuessGame {

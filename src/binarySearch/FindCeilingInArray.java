@@ -1,4 +1,4 @@
-package binarySearch.easy;
+package binarySearch;
 
 public class FindCeilingInArray {
 

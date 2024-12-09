@@ -1,4 +1,4 @@
-package binarySearch.easy;
+package binarySearch;
 
 import java.util.Arrays;
 
@@ -12,12 +12,10 @@ public class FindFirstAndLastPosition {
 
     public static int[] searchRange(int[] nums, int target) {
         int[] ans = {-1, -1};
-        int startPosition = search(nums, target, true);
-        int endPosition = search(nums, target, false);
-
-        ans[0] = startPosition;
-        ans[1] = endPosition;
-
+        ans[0] = search(nums, target, true);
+        if (ans[0] != -1) {
+            ans[1] = search(nums, target, false);
+        }
         return ans;
     }
 
