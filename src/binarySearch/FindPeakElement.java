@@ -1,14 +1,14 @@
 package binarySearch;
 
-// https://leetcode.com/problems/peak-index-in-a-mountain-array
-public class PeakIndexInMountainArray {
+// https://leetcode.com/problems/find-peak-element/description/
+public class FindPeakElement {
 
     public static void main(String[] args) {
         int[] nums = {1, 4, 5, 7, 10, 15, 12, 11};
-        System.out.println(peakIndexInMountainArray(nums));
+        System.out.println(findPeakElement(nums));
     }
 
-    public static int peakIndexInMountainArray(int[] arr) {
+    public static int findPeakElement(int[] arr) {
         int start = 0;
         int end = arr.length - 1;
 
