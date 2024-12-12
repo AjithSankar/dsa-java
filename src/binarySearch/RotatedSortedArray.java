@@ -52,7 +52,7 @@ public class RotatedSortedArray {
                 start = mid + 1;
             }
         }
-        return start;
+        return -1;
     }
 
     // With duplicates elements
