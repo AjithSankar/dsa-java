@@ -3,7 +3,7 @@ package sorting;
 import java.util.Arrays;
 
 
-public class BubbleSort {
+public class BubbleAndSelectionSort {
 
     public static void main(String[] args) {
         int[] arr1 = {3, 5, 7, 9, 1, 2};
