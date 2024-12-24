@@ -6,20 +6,28 @@ import java.util.Arrays;
 public class BubbleSort {
 
     public static void main(String[] args) {
-        int[] arr1 = {0,-1,9};
+        int[] arr1 = {3, 5, 7, 9, 1, 2};
         int[] arr = {1, 2, 3, 4, 5, 7, 8, 13, 15, 16, 20, 25};
         bubbleSort(arr);
         System.out.println(Arrays.toString(arr));
 
-        selection(arr1);
+        selectionWithMin(arr1);
         System.out.println(Arrays.toString(arr1));
     }
 
-    static void selection(int[] arr) {
+    static void selectionWithMax(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             int lastIndex = arr.length - i - 1;  // Get Last element index from array
             int maxIndex = getMax(arr, 0, lastIndex); // get Maximum value index from the array
             swap(arr, maxIndex, lastIndex);  // swap max index to last index.
+        }
+    }
+
+    static void selectionWithMin(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            int firstIndex = i;  // Get first element index from array
+            int minIndex = getMin(arr, firstIndex, arr.length-1); // get Min value index from the array
+            swap(arr, firstIndex, minIndex);  // swap min index to last index.
         }
     }
 
@@ -31,6 +39,16 @@ public class BubbleSort {
             }
         }
         return max;
+    }
+
+    static int getMin(int[] arr, int start, int end) {
+        int min = start;
+        for (int i = start; i <= end; i++) {
+            if (arr[i] < arr[min]) {
+                min = i;
+            }
+        }
+        return min;
     }
 
     //  O(N^2) complexity if array is sorted in Descending order - Worst Case
