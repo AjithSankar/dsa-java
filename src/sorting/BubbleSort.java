@@ -2,16 +2,40 @@ package sorting;
 
 import java.util.Arrays;
 
+
 public class BubbleSort {
 
     public static void main(String[] args) {
-        int[] arr1 = {20, 15, 10, 6, 4, 2, 1}; // O(N^2) complexity if array is sorted in Descending order - Worst Case
-        int[] arr = {1, 2, 3, 4, 5, 7, 8, 13, 15, 16, 20, 25}; // O(N) complexity if array is sorted in ascending - Best case
+        int[] arr1 = {0,-1,9};
+        int[] arr = {1, 2, 3, 4, 5, 7, 8, 13, 15, 16, 20, 25};
+        bubbleSort(arr);
+        System.out.println(Arrays.toString(arr));
 
-        System.out.println(Arrays.toString(bubbleSort(arr)));
+        selection(arr1);
+        System.out.println(Arrays.toString(arr1));
     }
 
-    private static int[] bubbleSort(int[] arr) {
+    static void selection(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            int lastIndex = arr.length - i - 1;  // Get Last element index from array
+            int maxIndex = getMax(arr, 0, lastIndex); // get Maximum value index from the array
+            swap(arr, maxIndex, lastIndex);  // swap max index to last index.
+        }
+    }
+
+    static int getMax(int[] arr, int start, int end) {
+        int max = start;
+        for (int i = start; i <= end; i++) {
+            if (arr[i] > arr[max]) {
+                max = i;
+            }
+        }
+        return max;
+    }
+
+    //  O(N^2) complexity if array is sorted in Descending order - Worst Case
+    // O(N) complexity if array is sorted in ascending - Best case
+    private static void bubbleSort(int[] arr) {
         int n = arr.length;
         // Special case: If given array is sorted then swap will not take place so you can end the loop
         boolean swapped = false;
@@ -32,6 +56,11 @@ public class BubbleSort {
                 }
             }
         }
-        return arr;
+    }
+
+    private static void swap(int[] arr, int first, int second) {
+        int temp = arr[first];
+        arr[first] = arr[second];
+        arr[second] = temp;
     }
 }
