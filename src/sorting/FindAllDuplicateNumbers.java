@@ -1,0 +1,49 @@
+package sorting;
+
+import java.util.ArrayList;
+import java.util.List;
+
+// https://leetcode.com/problems/find-the-duplicate-number/
+public class FindAllDuplicateNumbers {
+
+    public static void main(String[] args) {
+        // Given an array nums of n integers where nums[i] is in the range [1, n],
+        // return an array of all the integers in the range [1, n] that do not appear in nums.
+        int[] arr = {1, 1, 2};
+        System.out.println(findDuplicateNumber(arr));
+        //System.out.println(Arrays.toString(arr));
+
+    }
+
+    static List<Integer> findDuplicateNumber(int[] arr) {
+        int i = 0;
+        List<Integer> ans = new ArrayList<>();
+        while (i < arr.length) {
+            int correctIndex = arr[i] - 1;
+            if (arr[i] != arr[correctIndex]) {
+                swap(arr, i, correctIndex);
+            } else {
+                i++;
+            }
+        }
+
+        for (int index = 0; index < arr.length; index++) {
+            int correctIndex = arr[index] - 1;
+            // If element in the array is not equal to index+1 (Array starts from 1 to N then Index=value+1) then it's misplaced
+            // so we need to check if the same element is present at it's correct index.
+            // If it's present then we can say that it's duplicate.
+            if (arr[index] != index + 1 && arr[index] == arr[correctIndex]) {
+                ans.add(arr[index]);
+            }
+        }
+
+        return ans;
+    }
+
+
+    private static void swap(int[] arr, int first, int second) {
+        int temp = arr[first];
+        arr[first] = arr[second];
+        arr[second] = temp;
+    }
+}
