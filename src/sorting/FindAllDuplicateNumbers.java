@@ -31,7 +31,7 @@ public class FindAllDuplicateNumbers {
             // If element in the array is not equal to index+1 (Array starts from 1 to N then Index=value+1) then it's misplaced
             // so we need to check if the same element is present at it's correct index.
             // If it's present then we can say that it's duplicate.
-            if (arr[index] != index + 1 && arr[index] == arr[correctIndex]) {
+            if (arr[index] != index + 1) {
                 ans.add(arr[index]);
             }
         }
