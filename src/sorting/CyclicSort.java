@@ -14,19 +14,6 @@ public class CyclicSort {
 
     }
 
-    static void cyclicSort1(int[] arr) {
-        int i = 0;
-        while (i < arr.length) {
-            int correctIndex = arr[i]-1;
-            if (arr[i] < arr.length && arr[i] != arr[correctIndex]) {
-                swap(arr, i, correctIndex);
-            } else {
-                i++;
-            }
-
-        }
-    }
-
     static void cyclicSort(int[] arr) {
 
         int i = 0;

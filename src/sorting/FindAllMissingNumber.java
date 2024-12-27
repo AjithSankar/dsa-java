@@ -10,7 +10,7 @@ public class FindAllMissingNumber {
     public static void main(String[] args) {
         // Given an array nums of n integers where nums[i] is in the range [1, n],
         // return an array of all the integers in the range [1, n] that do not appear in nums.
-        int[] arr = {};
+        int[] arr = {4,3,2,7,8,2,3,1};
         System.out.println(findAllMissingNumber(arr));
         //System.out.println(Arrays.toString(arr));
 
@@ -21,7 +21,7 @@ public class FindAllMissingNumber {
         List<Integer> result = new ArrayList<>();
         while (i < arr.length) {
             int correctIndex = arr[i] - 1;
-            if (arr[i] <= arr.length && arr[i] != arr[correctIndex]) {
+            if (arr[i] != arr[correctIndex]) {
                 swap(arr, i, correctIndex);
             } else {
                 i++;
@@ -29,7 +29,7 @@ public class FindAllMissingNumber {
         }
 
         for (int index = 0; index < arr.length; index++) {
-            if (index != arr[index] - 1) {
+            if (arr[index] != index + 1) {
                 result.add(index + 1);
             }
         }
