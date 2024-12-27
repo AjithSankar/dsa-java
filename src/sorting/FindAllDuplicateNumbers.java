@@ -3,15 +3,14 @@ package sorting;
 import java.util.ArrayList;
 import java.util.List;
 
-// https://leetcode.com/problems/find-the-duplicate-number/
+// https://leetcode.com/problems/find-all-duplicates-in-an-array/
 public class FindAllDuplicateNumbers {
 
     public static void main(String[] args) {
-        // Given an array nums of n integers where nums[i] is in the range [1, n],
-        // return an array of all the integers in the range [1, n] that do not appear in nums.
+        // Given an integer array nums of length n where all the integers of nums are in the range [1, n] and
+        // each integer appears at most twice, return an array of all the integers that appears twice.
         int[] arr = {1, 1, 2};
         System.out.println(findDuplicateNumber(arr));
-        //System.out.println(Arrays.toString(arr));
 
     }
 
