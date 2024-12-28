@@ -1,7 +1,5 @@
 package sorting;
 
-import java.util.Arrays;
-
 // https://leetcode.com/problems/first-missing-positive/description/
 public class MissingPositiveNumber {
 
@@ -9,11 +7,11 @@ public class MissingPositiveNumber {
         // Given an unsorted integer array nums. Return the smallest positive integer that is not present in nums.
         //You must implement an algorithm that runs in O(n) time and uses O(1) auxiliary space.
         int[] arr = {1};
-        System.out.println(findMissingNumber(arr));
+        System.out.println(firstMissingPositive(arr));
 
     }
 
-    static int findMissingNumber(int[] arr) {
+    static int firstMissingPositive(int[] arr) {
 
         int i = 0;
         while (i < arr.length) {
