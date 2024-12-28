@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class SetMismatch {
 
     public static void main(String[] args) {
-        int[] arr = {3, 3, 3, 3, 3};
+        int[] arr = {1, 2, 2, 4};
         System.out.println(Arrays.toString(findErrorNums(arr)));
 
     }
@@ -25,7 +25,7 @@ public class SetMismatch {
 
         for (int index = 0; index < nums.length; index++) {
             if (nums[index] != index + 1) {
-                return new int[] {nums[index], index+1};
+                return new int[]{nums[index], index + 1};
             }
         }
 
