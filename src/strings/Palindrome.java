@@ -5,7 +5,6 @@ public class Palindrome {
     public static void main(String[] args) {
         String str = "abcdcba";
         System.out.println(isPalindrome1(str));
-
     }
 
     // Solution 1
