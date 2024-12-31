@@ -33,11 +33,11 @@ public class Patterns {
 
     static void pattern31(int n) {
         int originalN = n;
-        n = 2 * n;
-        for (int row = 0; row <= n; row++) {
-            for (int col = 0; col <= n; col++) {
+        n = 2 * n - 1;
+        for (int row = 0; row < n; row++) {
+            for (int col = 0; col < n; col++) {
                 //int atEveryIndex = Math.min(Math.min(row, col), Math.min(n-row, n-col)); // pattern starts from 0,1,2.. n
-                int atEveryIndex = originalN - Math.min(Math.min(row, col), Math.min(n - row, n - col)); // pattern starts from n, n-1,n-2...0
+                int atEveryIndex = originalN - Math.min(Math.min(row, col), Math.min(n - 1 - row, n - 1 - col)); // pattern starts from n, n-1,n-2...0
                 System.out.print(atEveryIndex + " ");
             }
             System.out.println();
