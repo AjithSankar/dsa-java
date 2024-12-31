@@ -1,5 +1,6 @@
 package patterns;
 
+// https://github.com/kunal-kushwaha/DSA-Bootcamp-Java/blob/main/assignments/09-patterns.md
 public class Patterns {
 
     /*
@@ -26,6 +27,22 @@ public class Patterns {
         pattern5(5);
         System.out.println();
         pattern28(5);
+        System.out.println();
+        pattern31(4);
+    }
+
+    static void pattern31(int n) {
+        int originalN = n;
+        n = 2 * n;
+        for (int row = 0; row <= n; row++) {
+            for (int col = 0; col <= n; col++) {
+                //int atEveryIndex = Math.min(Math.min(row, col), Math.min(n-row, n-col)); // pattern starts from 0,1,2.. n
+                int atEveryIndex = originalN - Math.min(Math.min(row, col), Math.min(n - row, n - col)); // pattern starts from n, n-1,n-2...0
+                System.out.print(atEveryIndex + " ");
+            }
+            System.out.println();
+        }
+
     }
 
     static void pattern28(int n) {
