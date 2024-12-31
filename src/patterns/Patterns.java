@@ -23,20 +23,13 @@ public class Patterns {
         System.out.println();
         pattern4(5);
         System.out.println();
-        pattern5(11);
+        pattern5(5);
     }
 
     static void pattern5(int n) {
-        int mid = n / 2;
-        for (int row = 0; row <= mid; row++) {
-            for (int col = 0; col <= row; col++) {
-                System.out.print("* ");
-            }
-            System.out.println();
-        }
-
-        for (int row = mid + 1; row < n; row++) {
-            for (int col = n; col > row; col--) {
+        for (int row = 1; row <= 2 * n; row++) {
+            int totalColsInRow = row > n ? 2 * n - row: row;
+            for (int col = 1; col <= totalColsInRow; col++) {
                 System.out.print("* ");
             }
             System.out.println();
