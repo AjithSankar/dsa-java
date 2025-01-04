@@ -3,14 +3,14 @@ package binarySearch;
 //https://leetcode.com/problems/search-in-rotated-sorted-array/description/
 public class RotatedSortedArray {
     public static void main(String[] args) {
-        //int[] arr = {4, 5, 6, 7, 0, 1, 2};
-        int[] arr = {4, 5, 5, 7, 1, 1, 2};
+        int[] arr = {4, 5, 6, 7, 0, 1, 2};
+        //int[] arr = {4, 5, 5, 7, 1, 1, 2};
         System.out.println(search(arr, 0));
 
     }
 
     public static int search(int[] nums, int target) {
-        int pivot = findPivotWithDuplicates(nums);
+        int pivot = findPivot(nums);
 
         // if pivot not found , it means the array is not rotated
         if (pivot == -1) {
@@ -76,7 +76,7 @@ public class RotatedSortedArray {
             // if elements at middle, start, end are equal then just skip the duplicates
             if (arr[mid] == arr[start] && arr[mid] == arr[end]) {
                 // skip duplicates
-                // Note: what is these elements at start and end were the pivot??
+                // Note: what if these elements at start and end were the pivot??
                 // check if start is pivot
                 if (arr[start] > arr[start + 1]) {
                     return start;

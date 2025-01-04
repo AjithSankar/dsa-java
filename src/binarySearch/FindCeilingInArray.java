@@ -5,7 +5,7 @@ public class FindCeilingInArray {
     public static void main(String[] args) {
         int[] arr = {2, 3, 4, 7, 10, 13, 19, 21, 28};
         // Ceiling -> The smallest number greater than or equal to target
-        System.out.println(findCeiling(arr, 28));
+        System.out.println(findCeiling(arr, 8));
     }
 
     // return an index of smallest number greater than or equal to target
