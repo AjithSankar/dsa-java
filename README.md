@@ -4,3 +4,6 @@
 #### Binary Search
 #### Sorting Algorithm 
 #### Cyclic Sort
+#### Patterns
+#### Recursion
+#### Strings
