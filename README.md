@@ -7,4 +7,5 @@
 #### Patterns
 #### Recursion
 #### Strings
-#### TimeComplexity
+#### TimeComplexity and Space Compexity
+#### 
